@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#3498db">
+    <link rel="manifest" href="manifest.json">
+  
+  <!-- Your existing head content -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Walk - Fall Detection System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .status-bar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .app-bar {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .app-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 30px 0 20px;
+        }
+        
+        .lottie-container {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3498db;
+            margin: 20px 0;
+        }
+        
+        .description {
+            font-size: 16px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .btn-get-started {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-get-started:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="status-bar">
+        Safe Walk - Real-time Fall Detection Active
+    </div>
+    <div class="app-bar">
+        Protecting Those Who Matter Most
+    </div>
+    
+    <div class="container">
+        <h1 class="app-name">Safe Walk</h1>
+        
+        <div class="lottie-container">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ktwnwv5m.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+        
+        <p class="tagline">Fall Detection That Cares</p>
+        
+        <p class="description">
+            Safe Walk provides real-time fall detection for elderly individuals, workers at hazardous sites, 
+            and people with medical conditions. Our AI-powered system detects falls instantly and provides 
+            immediate emergency response options, helping prevent serious injuries and saving lives.
+        </p>
+        
+        <!-- Update the Get Started button to link to signup.html -->
+        <button class="btn-get-started" onclick="window.location.href='signup.html'">Get Started</button>
+
+        <!-- Add a login link below the button -->
+        <div class="login-link">
+            Already have an account? <a href="login.html">Log in</a>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+     <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+    </script>
+    
+</body>
+</html>
